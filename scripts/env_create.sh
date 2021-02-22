@@ -92,13 +92,13 @@ fi
 echo "Using python version string $PYTHON"
 
 # Setup a new conda env using the existing python
-if source activate $ENV_DIR && [ ${force} -eq 0 ]
+if conda activate $ENV_DIR && [ ${force} -eq 0 ]
 then
   echo "Build environment already exists in $ENV_DIR."
 else
   echo "Creating a new conda environment in $ENV_DIR"
   conda create --prefix "$ENV_DIR" python="$PYTHON" -y
-  source activate $ENV_DIR
+  conda activate $ENV_DIR
 fi
 
 # Activate and install packages in the environment
@@ -130,7 +130,7 @@ if [[ $DEV == 1 ]]; then
   python -m pip install -e "$COREMLTOOLS_HOME/../coremltools" --upgrade
 fi
 
-source deactivate
+conda deactivate
 
 echo
 echo
