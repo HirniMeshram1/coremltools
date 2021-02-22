@@ -91,13 +91,13 @@ fi
 echo "Using python version string $PYTHON"
 
 # Setup a new conda env using the existing python
-if conda activate $ENV_DIR && [ ${force} -eq 0 ]
+if conda activate test-environment && [ ${force} -eq 0 ]
 then
   echo "Build environment already exists in $ENV_DIR."
 else
   echo "Creating a new conda environment in $ENV_DIR"
-  conda create --prefix "$ENV_DIR" python="$PYTHON" -y
-  conda activate $ENV_DIR
+  conda create --prefix test-environment python="$PYTHON" -y
+  conda activate test-environment
 fi
 
 # Activate and install packages in the environment
