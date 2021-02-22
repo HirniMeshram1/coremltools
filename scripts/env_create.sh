@@ -24,8 +24,7 @@ if [[ `uname -m` == 'aarch64' ]]; then
     wget https://github.com/conda-forge/miniforge/releases/download/4.8.2-1/Miniforge3-4.8.2-1-Linux-aarch64.sh -O miniconda.sh; 
     chmod +x miniconda.sh
     #./miniconda.sh -b -p $HOME/miniconda3
-fi
-if [[ `uname -m` == 'x86_64' ]]; then 
+else
     wget https://repo.continuum.io/miniconda/Miniconda3-4.2.12-Linux-x86_64.sh -O miniconda.sh; 
     chmod +x miniconda.sh
     #./miniconda.sh -b 
