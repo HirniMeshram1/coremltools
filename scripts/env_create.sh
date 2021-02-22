@@ -130,7 +130,7 @@ if [[ $DEV == 1 ]]; then
   python -m pip install -e "$COREMLTOOLS_HOME/../coremltools" --upgrade
 fi
 
-conda deactivate
+source deactivate
 
 echo
 echo
