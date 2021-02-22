@@ -17,7 +17,7 @@ include_build_deps=1
 include_test_deps=1
 include_docs_deps=0
 DEV=0
-PYTHON="3.7"
+PYTHON="3.8"
 force=0
 
 if [[ `uname -m` == 'aarch64' ]]; then 
@@ -92,7 +92,7 @@ fi
 echo "Using python version string $PYTHON"
 
 # Setup a new conda env using the existing python
-if conda activate $ENV_DIR && [ ${force} -eq 0 ]
+if source activate $ENV_DIR && [ ${force} -eq 0 ]
 then
   echo "Build environment already exists in $ENV_DIR."
 else
