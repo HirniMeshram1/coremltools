@@ -98,7 +98,7 @@ then
 else
   echo "Creating a new conda environment in $ENV_DIR"
   conda create --prefix "$ENV_DIR" python="$PYTHON" -y
-  conda activate $ENV_DIR
+  source activate $ENV_DIR
 fi
 
 # Activate and install packages in the environment
