@@ -17,7 +17,7 @@ include_build_deps=1
 include_test_deps=1
 include_docs_deps=0
 DEV=0
-PYTHON="3.8"
+PYTHON="3.7"
 force=0
 
 if [[ `uname -m` == 'aarch64' ]]; then 
