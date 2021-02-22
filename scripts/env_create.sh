@@ -32,7 +32,7 @@ if [[ `uname -m` == 'x86_64' ]]; then
 fi
 export PATH=$HOME/miniconda3/bin/conda:$PATH
 # Update conda itself
-conda update --yes --quiet conda
+#conda update --yes --quiet conda
 
 function print_help {
   echo "Configures the build with the specified toolchain. "
